@@ -4,14 +4,14 @@
         placeholder="Логин"
         icon="man-user"
         v-model="login"
-        :rules="{ required: true, alpha: true, max: 10 }"
+        :rules="{ required: true, alpha: true, max: 10, min: 2 }"
         name="login"></CustomInput>
     <CustomInput
         type="password"
         placeholder="Пароль"
         icon="lock"
         v-model="password"
-        :rules="{ required: true }"
+        :rules="{ required: true, max: 10, min: 2 }"
         name="Пароль"></CustomInput>
     <div class="authorization-form__remember">
       <CustomCheckbox
