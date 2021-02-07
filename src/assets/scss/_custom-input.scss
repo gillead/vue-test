@@ -1,0 +1,48 @@
+.custom-input {
+
+  label {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+
+    input {
+      width: 100%;
+      font-size: 18px;
+      line-height: 22px;
+      color: #595959;
+      padding: 13px 13.5px 13px 27px;
+      border-width: 0 0 2px 0;
+      border-color: #DEDEDE;
+
+      &::placeholder {
+        color: #595959;
+        opacity: 1;
+      }
+
+      &:active, &:focus {
+        outline: none;
+        border-color: $main_color;
+        color: $main_color;
+        transition: 0.2s;
+
+        &::placeholder {
+          color: $main_color;
+        }
+
+        ~ .custom-input__icon path {
+          fill: $main_color;
+        }
+      }
+    }
+  }
+
+  .custom-input__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
